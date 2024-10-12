@@ -1,4 +1,3 @@
-import { useState } from "react";
 
 interface Props {
   onFromChange: (from: string) => void;

@@ -1,50 +1,20 @@
-# React + TypeScript + Vite
+# Currency Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **Currency Converter** web application built with React and TypeScript. It allows users to convert currencies by selecting a "From" and "To" currency and inputting an amount. The app fetches live exchange rates and performs real-time currency conversions. It also features a "Swap" functionality to easily switch between the selected currencies.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Currency Selection**: Choose a "From" and "To" currency from a list of available options.
+- **Real-Time Conversion**: Input an amount and see the converted value immediately.
+- **Swap Currencies**: Quickly swap the selected "From" and "To" currencies with a button click.
+- **Live Exchange Rates**: Fetches current exchange rates from an external API.
+- **Responsive UI**: The user interface is responsive and user-friendly, built with Tailwind CSS.
 
-## Expanding the ESLint configuration
+## Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![Currency Converter UI](<img width="1440" alt="currencyconverter" src="https://github.com/user-attachments/assets/77ead985-4702-4bad-8880-5e964e35b858">
+)
 
-- Configure the top-level `parserOptions` property like this:
+## API
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+The app uses the Currency API by Fawaz Ahmed [https://github.com/fawazahmed0/currency-api] to get live exchange rates.
